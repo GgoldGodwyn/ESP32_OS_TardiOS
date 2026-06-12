@@ -1,0 +1,7 @@
+"-specs=C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/app-sdk/build/bootloader/specs/picolibc.specs"
+-Wno-frame-address
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
+-fno-rtti

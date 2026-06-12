@@ -1,0 +1,5 @@
+dependencies:
+  idf: ">=5.1"
+  espressif/elf_loader: "1.*"
+  joltwallet/littlefs: "^1.14"
+  espressif/esp_lvgl_port: "^2.3"
