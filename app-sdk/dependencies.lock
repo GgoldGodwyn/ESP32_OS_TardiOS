@@ -3,6 +3,7 @@ dependencies:
     component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
     dependencies:
     - name: idf
+      registry_url: https://components.espressif.com
       require: private
       version: '>=4.1'
     source:
@@ -33,9 +34,9 @@ dependencies:
   idf:
     source:
       type: idf
-    version: 6.0.1
+    version: 5.3.1
 direct_dependencies:
 - espressif/elf_loader
 manifest_hash: a97ecaf632bb199dab0983794e216f5d7556e119923216ba89ee22e9f87d15cd
-target: esp32
-version: 3.0.0
+target: esp32s3
+version: 2.0.0

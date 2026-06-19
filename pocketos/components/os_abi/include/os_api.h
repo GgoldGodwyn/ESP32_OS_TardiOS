@@ -37,6 +37,7 @@ typedef enum {
     OS_PANEL_RGB      = 0,   /* dumb panel, no GRAM, continuous PSRAM scanout (ST7701) */
     OS_PANEL_I80      = 1,   /* 8080 parallel, has GRAM, dirty-region updates (ILI9341)  */
     OS_PANEL_MIPI_DSI = 2,   /* P4 DSI                                                   */
+    OS_PANEL_SPI      = 3,   /* SPI with GRAM, dirty-region updates (ST7789, ILI9341-SPI) */
 } os_panel_class_t;
 
 /* LVGL alignment constants — values match LV_ALIGN_* in LVGL 8.x/9.x exactly.
@@ -61,6 +62,7 @@ typedef struct {
     os_panel_class_t panel_class;
     os_touch_type_t  touch;
     uint8_t          has_keyboard;
+    uint8_t          has_sd_card;   /* 1 if SD card detected at boot */
     char             board_name[24];
 } os_caps_t;
 
@@ -95,9 +97,8 @@ typedef struct os_api {
     void     (*gui_label_set_text)(void *label, const char *text);
     /* Delete any LVGL object created by the app (clean up on exit). */
     void     (*gui_obj_del)(void *obj);
-
-    /* ---- reserved: three slots remain ---- */
-    void    *_reserved[1];
+    /* Remove all OS-owned widgets from the screen so the app starts clean. */
+    void     (*gui_clean_screen)(void);
 } os_api_t;
 
 #ifdef __cplusplus

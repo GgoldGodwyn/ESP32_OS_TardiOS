@@ -1,0 +1,19 @@
+# ESP-IDF build outputs
+build/
+sdkconfig
+sdkconfig.old
+
+# Component manager lock — delete when switching IDF versions, then rebuild
+# dependencies.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Generated storage image
+storage.bin
+
+# OS-specific
+.DS_Store
+Thumbs.db

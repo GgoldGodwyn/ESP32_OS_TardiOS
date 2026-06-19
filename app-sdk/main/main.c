@@ -20,10 +20,8 @@ int main(int argc, char **argv)
     os_caps_t caps;
     os->get_caps(&caps);
 
-    /* Clear the OS splash and draw app content */
-    os->gui_lock();
-    /* Nothing to delete — we draw on top of the existing screen */
-    os->gui_unlock();
+    /* Clear the OS splash screen before drawing app content */
+    os->gui_clean_screen();
 
     /* Title label */
     void *title = os->gui_label_create(

@@ -1,6 +1,6 @@
-# 16 MB flash layout.  app arena lives in PSRAM at runtime, not here.
+# 8 MB flash layout — Waveshare ESP32-S3-Touch-LCD-2.8
 # Name,     Type, SubType,  Offset,    Size
 nvs,        data, nvs,      0x9000,    0x6000
-phy_init,   data, phy,      0xf000,    0x1000
+phy_init,   data, phy,      0xF000,    0x1000
 factory,    app,  factory,  0x10000,   0x300000
-storage,    data, littlefs, 0x310000,  0xCF0000
+storage,    data, littlefs, 0x310000,  0x4F0000

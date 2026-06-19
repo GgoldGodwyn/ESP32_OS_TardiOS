@@ -38,6 +38,7 @@ typedef enum {
     OS_PANEL_RGB      = 0,
     OS_PANEL_I80      = 1,
     OS_PANEL_MIPI_DSI = 2,
+    OS_PANEL_SPI      = 3,
 } os_panel_class_t;
 
 /* LVGL alignment constants — values match LV_ALIGN_* in LVGL 8.x/9.x exactly.
@@ -61,6 +62,7 @@ typedef struct {
     os_panel_class_t panel_class;
     os_touch_type_t  touch;
     uint8_t          has_keyboard;
+    uint8_t          has_sd_card;
     char             board_name[24];
 } os_caps_t;
 
@@ -90,9 +92,8 @@ typedef struct os_api {
                                  os_align_t align, int x_ofs, int y_ofs);
     void     (*gui_label_set_text)(void *label, const char *text);
     void     (*gui_obj_del)(void *obj);
-
-    /* ---- reserved ---- */
-    void    *_reserved[1];
+    /* Remove all OS-owned widgets from the screen so the app starts clean. */
+    void     (*gui_clean_screen)(void);
 } os_api_t;
 
 #ifdef __cplusplus

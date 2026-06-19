@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/app-sdk/build/CMakeFiles/bootloader
-C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/app-sdk/build/CMakeFiles/bootloader.rule
-C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/app-sdk/build/CMakeFiles/bootloader-complete.rule
-C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+C:/Users/Onwuchekwa Valour/Desktop/TardOS/ESP32_OS_TardiOS/app-sdk/build/CMakeFiles/bootloader
+C:/Users/Onwuchekwa Valour/Desktop/TardOS/ESP32_OS_TardiOS/app-sdk/build/CMakeFiles/bootloader.rule
+C:/Users/Onwuchekwa Valour/Desktop/TardOS/ESP32_OS_TardiOS/app-sdk/build/CMakeFiles/bootloader-complete.rule
+C:/Users/Onwuchekwa Valour/Desktop/TardOS/ESP32_OS_TardiOS/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Users/Onwuchekwa Valour/Desktop/TardOS/ESP32_OS_TardiOS/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/Onwuchekwa Valour/Desktop/TardOS/ESP32_OS_TardiOS/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/Onwuchekwa Valour/Desktop/TardOS/ESP32_OS_TardiOS/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/Onwuchekwa Valour/Desktop/TardOS/ESP32_OS_TardiOS/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/Onwuchekwa Valour/Desktop/TardOS/ESP32_OS_TardiOS/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/Onwuchekwa Valour/Desktop/TardOS/ESP32_OS_TardiOS/app-sdk/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

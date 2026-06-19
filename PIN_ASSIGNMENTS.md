@@ -1,56 +1,44 @@
 # Pin Assignments — TardiOS Phase 1
 
-Target chip: **ESP32-S3**  
-Board name: `tardi-s3`  
-Pin defines live in: `tardi/components/board/board.c`
+Target chip: **ESP32-S3** (8 MB flash)
+Board: **Waveshare ESP32-S3-Touch-LCD-2.8**
+Pin defines live in: `pocketos/components/board/board.c`
 
 ---
 
-## ILI9341 — 8080 Parallel (i80) Display
+## ST7789 — SPI Display (240 × 320 IPS)
 
-| GPIO | Signal | `#define` |
-|------|--------|-----------|
-| 4    | D0     | `PIN_LCD_D0` |
-| 5    | D1     | `PIN_LCD_D1` |
-| 6    | D2     | `PIN_LCD_D2` |
-| 7    | D3     | `PIN_LCD_D3` |
-| 15   | D4     | `PIN_LCD_D4` |
-| 16   | D5     | `PIN_LCD_D5` |
-| 17   | D6     | `PIN_LCD_D6` |
-| 18   | D7     | `PIN_LCD_D7` |
-| 8    | WR     | `PIN_LCD_WR` |
-| 9    | DC     | `PIN_LCD_DC` |
-| 10   | CS     | `PIN_LCD_CS` |
-| 11   | RST    | `PIN_LCD_RST` |
-| 12   | BL     | `PIN_LCD_BL` |
+| GPIO | Signal | `#define`      |
+|------|--------|----------------|
+| 1    | SCLK   | `PIN_LCD_SCLK` |
+| 2    | MOSI   | `PIN_LCD_MOSI` |
+| 42   | MISO   | `PIN_LCD_MISO` |
+| 41   | DC     | `PIN_LCD_DC`   |
+| 39   | CS     | `PIN_LCD_CS`   |
+| 40   | RST    | `PIN_LCD_RST`  |
+| 6    | BL     | `PIN_LCD_BL`   |
 
-Resolution: 240 × 320. RD line not needed (write-only mode).
+SPI host: `SPI2_HOST` @ 40 MHz.
 
 ---
 
-## XPT2046 — Resistive Touch (dedicated SPI2)
+## CST816S — Capacitive Touch (I2C) — Phase 1b
 
-| GPIO | Signal | `#define` |
-|------|--------|-----------|
-| 40   | CS     | `PIN_TOUCH_CS` |
-| 41   | CLK    | `PIN_TOUCH_CLK` |
-| 42   | MOSI   | `PIN_TOUCH_MOSI` |
-| 3    | MISO   | `PIN_TOUCH_MISO` |
-| 39   | IRQ    | `PIN_TOUCH_IRQ` |
+| GPIO | Signal | `#define`       |
+|------|--------|-----------------|
+| 15   | SDA    | `PIN_TOUCH_SDA` |
+| 7    | SCL    | `PIN_TOUCH_SCL` |
+| 17   | INT    | `PIN_TOUCH_INT` |
+| 16   | RST    | `PIN_TOUCH_RST` |
 
-Separate SPI bus from the display (parallel display has no MISO).
+I2C address: `0x1A`.
 
 ---
 
-## TCA8418 — QWERTY Keyboard Encoder (I2C)
+## SD Card — Adafruit MicroSD Breakout (SPI) — Phase 2
 
-| GPIO | Signal | `#define` |
-|------|--------|-----------|
-| 46   | SCL    | `PIN_KBD_SCL` |
-| 48   | SDA    | `PIN_KBD_SDA` |
-| TBD  | INT    | `PIN_KBD_INT` |
-
-TCA8418 handles the key matrix (rows/cols) internally; the ESP32-S3 only needs I2C + INT.
+Pins TBD. Will share or use a separate SPI bus from the display.
+The OS will probe at boot and report `sd=present` / `sd=not found` in the boot log.
 
 ---
 
@@ -61,8 +49,5 @@ TCA8418 handles the key matrix (rows/cols) internally; the ESP32-S3 only needs I
 | 0     | Strapping — boot mode |
 | 19–20 | USB D−/D+ (ESP32-S3 native USB) |
 | 26–32 | SPI flash (internal, do not use) |
-| 33–37 | PSRAM (internal on -R2 / -R8 modules, do not use) |
-| 45    | Strapping — VDD_SPI voltage |
-| 46    | Strapping — ROM message printing *(also used for KBD SCL — OK after boot)* |
-
-> **Chip target change:** the build directory and `sdkconfig` must be deleted and the project re-targeted with `idf.py set-target esp32s3` before the first S3 build.
+| 33–37 | PSRAM (internal on -R2/-R8 modules, do not use) |
+| 46    | Strapping — ROM message printing |

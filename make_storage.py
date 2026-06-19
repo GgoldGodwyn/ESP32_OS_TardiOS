@@ -15,7 +15,7 @@ from pathlib import Path
 import littlefs
 
 BLOCK_SIZE  = 4096
-BLOCK_COUNT = 0xCF0000 // BLOCK_SIZE   # 3312 blocks (~12.7 MB)
+BLOCK_COUNT = 0x4F0000 // BLOCK_SIZE   # 1264 blocks (~4.9 MB)
 OUT_IMAGE   = "storage.bin"
 
 # Maps source file path -> destination path on the LittleFS volume
