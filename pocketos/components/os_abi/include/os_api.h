@@ -18,7 +18,7 @@
 extern "C" {
 #endif
 
-#define OS_ABI_VERSION 2u
+#define OS_ABI_VERSION 3u
 
 typedef enum {
     OS_LOG_ERROR = 1,
@@ -96,7 +96,18 @@ typedef struct os_api {
     /* Delete any LVGL object created by the app (clean up on exit). */
     void     (*gui_obj_del)(void *obj);
 
-    /* ---- reserved: three slots remain ---- */
+    /* ---- gui helpers (ABI v3) ---- */
+    /* Create a tappable button on parent, sized w x h, with a text label.
+     * Returns opaque lv_obj_t* handle, or NULL on failure. */
+    void    *(*gui_button_create)(void *parent, const char *text,
+                                  os_align_t align, int x_ofs, int y_ofs,
+                                  int w, int h);
+    /* Register cb(user_data) to run when btn is tapped. cb runs synchronously
+     * on the OS's own GUI task — keep it fast (no sleep_ms, no launching
+     * other apps); it is safe to call gui_lock()/gui_* from inside cb. */
+    void     (*gui_on_click)(void *btn, void (*cb)(void *user_data), void *user_data);
+
+    /* ---- reserved: one slot remains ---- */
     void    *_reserved[1];
 } os_api_t;
 

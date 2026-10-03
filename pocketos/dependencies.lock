@@ -1,4 +1,28 @@
 dependencies:
+  atanisoft/esp_lcd_touch_xpt2046:
+    component_hash: 7e6381b67b6e487379118368b8e91624dc87036ef5734818de1db9eb35697998
+    dependencies:
+    - name: espressif/esp_lcd_touch
+      registry_url: https://components.espressif.com
+      require: private
+      version: '>=1.0.4'
+    - name: idf
+      require: private
+      version: '>=4.4'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.6
+  atanisoft/esp_tca8418:
+    component_hash: c1f5f9e1bcf0d46c7c75ea6822efea4b95463640b21dfac9ea8de5d462756bac
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.2'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.0
   espressif/cmake_utilities:
     component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
     dependencies:
@@ -44,6 +68,16 @@ dependencies:
       registry_url: https://components.espressif.com/
       type: service
     version: 1.2.0
+  espressif/esp_lcd_touch:
+    component_hash: 3f85a7d95af876f1a6ecca8eb90a81614890d0f03a038390804e5a77e2caf862
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.4.2'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.2.1
   espressif/esp_lvgl_port:
     component_hash: fb6c1fdfe70d4ca39a035d63ca394a35f17ec84ce16ff98ecb13a54155d75da4
     dependencies:
@@ -61,7 +95,7 @@ dependencies:
   idf:
     source:
       type: idf
-    version: 6.0.1
+    version: 5.4.1
   joltwallet/littlefs:
     component_hash: 01faa388c6305fe77fd6962cda6171e753033458f24f8fae9e9d932e3d817a4c
     dependencies:
@@ -73,18 +107,20 @@ dependencies:
       type: service
     version: 1.22.1
   lvgl/lvgl:
-    component_hash: 17e68bfd21f0edf4c3ee838e2273da840bf3930e5dbc3bfa6c1190c3aed41f9f
+    component_hash: 184e532558c1c45fefed631f3e235423d22582aafb4630f3e8885c35281a49ae
     dependencies: []
     source:
       registry_url: https://components.espressif.com
       type: service
-    version: 9.4.0
+    version: 9.5.0
 direct_dependencies:
+- atanisoft/esp_lcd_touch_xpt2046
+- atanisoft/esp_tca8418
 - espressif/elf_loader
 - espressif/esp_lcd_ili9341
 - espressif/esp_lvgl_port
 - idf
 - joltwallet/littlefs
-manifest_hash: 0bf5f8fefd4cba3af7fdd18444ff524097517744c5eeb006fc11b855361f6b79
-target: esp32s3
-version: 3.0.0
+manifest_hash: c18ed6a11247cc94f0e26180303aa8a0a3cf79a9945dd58743408268a5a449c0
+target: esp32p4
+version: 2.0.0

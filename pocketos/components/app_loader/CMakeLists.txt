@@ -3,4 +3,4 @@
 idf_component_register(SRCS "app_loader.c"
                        INCLUDE_DIRS "include"
                        REQUIRES os_abi
-                       PRIV_REQUIRES espressif__elf_loader)
+                       PRIV_REQUIRES espressif__elf_loader json)

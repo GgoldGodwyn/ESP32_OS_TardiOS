@@ -1,0 +1,2 @@
+source /home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/apps-src/myapp/build/gdbinit/symbols
+source /home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/apps-src/myapp/build/gdbinit/connect

@@ -1,0 +1,126 @@
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0x1 (POWERON),boot:0xb (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x162c
+load:0x4ff2abd0,len:0xd6c
+load:0x4ff2cbd0,len:0x3308
+entry 0x4ff2abda
+[0;32mI (25) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Jul 16 2026 15:12:26[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v1.3[0m
+[0;32mI (29) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (36) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32p4: SPI Flash Size : 16MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (77) boot:  3 storage          Unknown data     01 83 00310000 00cf0000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=400b0020 size=1f7ech (129004) map[0m
+[0;32mI (117) esp_image: segment 1: paddr=0002f814 vaddr=30100000 size=00068h (   104) load[0m
+[0;32mI (119) esp_image: segment 2: paddr=0002f884 vaddr=4ff00000 size=00794h (  1940) load[0m
+[0;32mI (122) esp_image: segment 3: paddr=00030020 vaddr=40000020 size=a8130h (688432) map[0m
+[0;32mI (243) esp_image: segment 4: paddr=000d8158 vaddr=4ff00794 size=13c64h ( 80996) load[0m
+[0;32mI (261) esp_image: segment 5: paddr=000ebdc4 vaddr=4ff14400 size=026d0h (  9936) load[0m
+[0;32mI (268) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (268) boot: Disabling RNG early entropy source...[0m
+[0;32mI (279) hex_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (279) hex_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (279) hex_psram: DriveStr.    : 0x00 (25 Ohm)[0m
+[0;32mI (280) hex_psram: dev id       : 0x03 (generation 4)[0m
+[0;32mI (285) hex_psram: density      : 0x07 (256 Mbit)[0m
+[0;32mI (289) hex_psram: good-die     : 0x06 (Pass)[0m
+[0;32mI (293) hex_psram: SRF          : 0x02 (Slow Refresh)[0m
+[0;32mI (298) hex_psram: BurstType    : 0x00 ( Wrap)[0m
+[0;32mI (302) hex_psram: BurstLen     : 0x03 (2048 Byte)[0m
+[0;32mI (307) hex_psram: BitMode      : 0x01 (X16 Mode)[0m
+[0;32mI (311) hex_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (316) hex_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (320) esp_psram: Found 32MB PSRAM device[0m
+[0;32mI (324) esp_psram: Speed: 20MHz[0m
+[0;32mI (327) hex_psram: psram CS IO is dedicated[0m
+[0;32mI (331) cpu_start: Multicore app[0m
+[0;32mI (4128) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (4139) cpu_start: Pro cpu start user code[0m
+[0;32mI (4139) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (4139) app_init: Application information:[0m
+[0;32mI (4139) app_init: Project name:     tardi[0m
+[0;32mI (4143) app_init: App version:      f3236433-dirty[0m
+[0;32mI (4148) app_init: Compile time:     Jul 16 2026 15:12:11[0m
+[0;32mI (4153) app_init: ELF file SHA256:  024552785...[0m
+[0;32mI (4157) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (4162) efuse_init: Min chip rev:     v0.1[0m
+[0;32mI (4166) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (4170) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (4174) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (4180) heap_init: At 4FF29AD0 len 000114F0 (69 KiB): RAM[0m
+[0;32mI (4185) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (4190) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (4196) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (4201) heap_init: At 30100068 len 00001F98 (7 KiB): TCM[0m
+[0;32mI (4206) esp_psram: Adding pool of 32768K of PSRAM memory to heap allocator[0m
+[0;32mI (4214) spi_flash: detected chip: generic[0m
+[0;32mI (4217) spi_flash: flash io: dio[0m
+[0;32mI (4220) main_task: Started on CPU0[0m
+[0;32mI (4260) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (4260) main_task: Calling app_main()[0m
+[0;32mI (4270) gpio: GPIO[51]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4270) gpio: GPIO[52]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4280) gpio: GPIO[51]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4290) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (4410) board: display up: tardi-p4 240x320[0m
+[0;32mI (4410) board: touch up: xpt2046 on SPI2 (cs=54 irq=-1)[0m
+[0;32mI (4410) gpio: GPIO[9]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[1;31mE (4440) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[0;32mI (4440) gpio: GPIO[9]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (4440) board: sdcard unavailable (263) — continuing without it[0m
+[0;32mI (4450) tca8418: Initializing I2C bus (scl:1, sda:2)[0m
+[0;32mI (4450) tca8418: Initializing device:34[0m
+[0;32mI (4460) tca8418: Probing device:34[0m
+ESP_ERROR_CHECK_WITHOUT_ABORT failed: esp_err_t 0x105 (ESP_ERR_NOT_FOUND) at 0x40014e94
+file: "./managed_components/atanisoft__esp_tca8418/esp_tca8418.cpp" line 106
+func: bool TCA8418::hw_init(size_t, size_t)
+expression: i2c_master_probe(busHandle_, address_, 10)
+[0;32mI (4480) tca8418: Device 34 not found/responding![0m
+[0;33mW (4490) board: keyboard unavailable (-1) — continuing without it[0m
+[0;32mI (4490) LVGL: Starting LVGL task[0m
+[0;32mI (4520) tardi: LVGL up[0m
+[0;32mI (4520) tardi: boot: tardi-p4 240x320 touch=1 kbd=0[0m
+[0;32mI (4520) tardi: discovered 0 app(s):[0m
+[0;32mI (4520) main_task: Returned from app_main()[0m
+[0;32mI (4129) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (4139) cpu_start: Pro cpu start user code[0m
+[0;32mI (4139) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (4139) app_init: Application information:[0m
+[0;32mI (4140) app_init: Project name:     tardi[0m
+[0;32mI (4143) app_init: App version:      f3236433-dirty[0m
+[0;32mI (4148) app_init: Compile time:     Jul 16 2026 15:12:11[0m
+[0;32mI (4153) app_init: ELF file SHA256:  024552785...[0m
+[0;32mI (4157) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (4162) efuse_init: Min chip rev:     v0.1[0m
+[0;32mI (4166) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (4170) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (4174) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (4180) heap_init: At 4FF29AD0 len 000114F0 (69 KiB): RAM[0m
+[0;32mI (4185) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (4190) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (4196) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (4201) heap_init: At 30100068 len 00001F98 (7 KiB): TCM[0m
+[0;32mI (4207) esp_psram: Adding pool of 32768K of PSRAM memory to heap allocator[0m
+[0;32mI (4214) spi_flash: detected chip: generic[0m
+[0;32mI (4217) spi_flash: flash io: dio[0m
+[0;32mI (4221) main_task: Started on CPU0[0m
+[0;32mI (4261) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (4261) main_task: Calling app_main()[0m
+[0;32mI (4271) gpio: GPIO[51]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4271) gpio: GPIO[52]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4281) gpio: GPIO[51]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4291) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (4411) board: display up: tardi-p4 240x320[0m
+[0;32mI (4411) board: touch up: xpt2046 on SPI2 (cs=5

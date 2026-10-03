@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/apps-src/myapp/build/CMakeFiles/bootloader
+/home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/apps-src/myapp/build/CMakeFiles/bootloader.rule
+/home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/apps-src/myapp/build/CMakeFiles/bootloader-complete.rule
+/home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/apps-src/myapp/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/apps-src/myapp/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/apps-src/myapp/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/apps-src/myapp/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/apps-src/myapp/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/apps-src/myapp/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/apps-src/myapp/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

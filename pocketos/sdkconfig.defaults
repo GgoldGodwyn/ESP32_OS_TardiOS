@@ -12,8 +12,18 @@ CONFIG_SPIRAM_MODE_OCT=y
 CONFIG_SPIRAM_SPEED_80M=y
 CONFIG_SPIRAM_USE_MALLOC=y
 
+# QEMU (esp-develop-9.0.0-20240606) does not emulate PSRAM on ESP32-S3,
+# so boot would otherwise panic there. This lets boot continue without
+# PSRAM under QEMU while still using it normally on real N16R8 hardware.
+CONFIG_SPIRAM_IGNORE_NOTFOUND=y
+
 # ELF loader: run relocated apps from PSRAM.
 CONFIG_ELF_LOADER_ENABLE=y
 
 # Reasonable main-task stack for the boot path.
 CONFIG_ESP_MAIN_TASK_STACK_SIZE=6144
+
+# Raised from the 400 default to filter weak/noise-induced touch reads —
+# touch and the microSD card share SPI2, and spurious low-pressure touch
+# events were triggering unwanted app launches.
+CONFIG_XPT2046_Z_THRESHOLD=800

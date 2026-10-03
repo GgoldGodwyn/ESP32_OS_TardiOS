@@ -374,7 +374,15 @@ static int esp_elf_load_segment(esp_elf_t *elf, const uint8_t *pbuf)
             return -EINVAL;
         }
 
-        if (first_segment == true) {
+        /* LOCAL PATCH (TardiOS): this condition was `first_segment == true`,
+         * which is never true here since first_segment starts false — the
+         * first PT_LOAD segment always fell into the else branch below, so
+         * vaddr_s never got set away from its 0 initializer. Harmless when
+         * segment 0's vaddr is genuinely 0 (typical for -fPIC output, so it
+         * usually goes unnoticed), but wrong in general and computes an
+         * inflated `size` whenever it isn't. Lives in managed_components/,
+         * so a dependency refresh will silently drop this fix. */
+        if (first_segment == false) {
             vaddr_s = phdr[i].vaddr;
             vaddr_e = phdr[i].vaddr + phdr[i].memsz;
             first_segment = true;

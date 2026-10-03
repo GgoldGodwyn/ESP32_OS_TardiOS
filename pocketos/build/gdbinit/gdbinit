@@ -1,2 +1,2 @@
-source C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/pocketos/build/gdbinit/symbols
-source C:/Users/LENOVO/Documents/PlatformIO/Projects/pocketos-phase1/pocketos/build/gdbinit/connect
+source /home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/pocketos/build/gdbinit/symbols
+source /home/ggold/Documents/Platformio/personal/ESP32_OS_TardiOS/pocketos/build/gdbinit/connect

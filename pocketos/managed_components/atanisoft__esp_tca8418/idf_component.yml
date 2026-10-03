@@ -1,0 +1,9 @@
+dependencies:
+  idf: '>=5.2'
+description: ESP driver for TCA8418 keypad interface
+repository: git://github.com/atanisoft/esp_tca8418.git
+repository_info:
+  commit_sha: fd63f4abd65456e519866b4da571fb7e94a7cf24
+  path: .
+url: https://github.com/atanisoft/esp_tca8418
+version: 1.0.0
